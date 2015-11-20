@@ -1,0 +1,27 @@
+{
+  "name": "JCSuitUI",
+  "authors": [
+    "User <jasonchen1882@gmail.com>"
+  ],
+  "description": "JCSuitUI component for UC Activity",
+  "main": "src/JCSuitUI.js",
+  "license": "MIT",
+  "homepage": "http://git.ucweb.local/components/SuitUI",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "6171c81942",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6171c81942016ceffdf76007d934529ae4416043"
+  },
+  "_source": "git@git.ucweb.local:components/SuitUI.git",
+  "_target": "*",
+  "_originalSource": "git@git.ucweb.local:components/SuitUI.git"
+}
