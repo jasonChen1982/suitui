@@ -1,13 +1,12 @@
 {
-  "name": "JCSuitUI",
-  "authors": [
-    "User <jasonchen1882@gmail.com>"
-  ],
-  "description": "JCSuitUI component for UC Activity",
-  "main": "src/JCSuitUI.js",
-  "license": "MIT",
-  "homepage": "http://git.ucweb.local/components/SuitUI",
-  "dependencies": {},
+  "name": "suitui",
+  "version": "0.0.3",
+  "description": "rem 自适应",
+  "main": "src/index.js",
+  "authors": "",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,13 +14,14 @@
     "test",
     "tests"
   ],
-  "_release": "6171c81942",
+  "_release": "0.0.3",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "6171c81942016ceffdf76007d934529ae4416043"
+    "type": "version",
+    "tag": "v0.0.3",
+    "commit": "4187dba7b0db24cde4a19b84a45d8830101bc9d6"
   },
-  "_source": "git@git.ucweb.local:components/SuitUI.git",
-  "_target": "*",
-  "_originalSource": "git@git.ucweb.local:components/SuitUI.git"
+  "_source": "git@git.ucweb.local:pffe/component",
+  "_target": "~0.0.3",
+  "_originalSource": "git@git.ucweb.local:pffe/component",
+  "_direct": true
 }

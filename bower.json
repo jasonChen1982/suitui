@@ -1,15 +1,12 @@
 {
   "name": "suitui",
-  "version": "0.0.1",
-  "authors": [
-    "User <jasonchen1882@gmail.com>"
-  ],
-  "description": "JCSuitUI component for UC Activity",
+  "version": "0.0.3",
+  "description": "rem 自适应",
   "main": "src/index.js",
-  "license": "MIT",
-  "homepage": "http://git.ucweb.local/components/SuitUI",
-  "dependencies": {
-  },
+  "authors": "",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",

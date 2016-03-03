@@ -1,6 +1,6 @@
 {
   "name": "suitui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "rem 自适应",
   "main": "src/index.js",
   "scripts": {
