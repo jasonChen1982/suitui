@@ -1,0 +1,17 @@
+{
+  "name": "suitui",
+  "version": "0.0.1",
+  "description": "rem 自适应",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.ucweb.local:components/suitui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
