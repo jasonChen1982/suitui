@@ -31,8 +31,14 @@
     };
     SuitUI.prototype.suit = function() {
         var nowSize = this.VOH==='width'? window.innerWidth||document.documentElement.offsetWidth : window.innerHeight||document.documentElement.offsetWidth;
-        this.curRem = this.rem * nowSize / this.DsgSize;
-        this.root.style.fontSize = this.curRem + 'px';
+        this.curPPR = this.rem * nowSize / this.DsgSize;
+        this.root.style.fontSize = this.curPPR + 'px';
+    };
+    SuitUI.prototype.RTP = function(rem) {
+        return rem*this.curPPR >> 0;
+    };
+    SuitUI.prototype.PTR = function(px) {
+        return px/this.curPPR;
     };
     window.JC = window.JC || {};
     window.JC.UI = new SuitUI({
