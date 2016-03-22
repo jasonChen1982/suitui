@@ -7,11 +7,11 @@ web移动开发页面自适应解决方案，采用rem来统一页面视觉表�
 1. clone组件
     git
     ```shell
-    git clone git@git.ucweb.local:redfe/prune.git
+    git clone git@git.ucweb.local:redfe/suitui.git
     ```
     
 2. 安装组件到项目 （bower）
     bower
     ```shell
-    bower install git@git.ucweb.local:redfe/prune.git
+    bower install git@git.ucweb.local:redfe/suitui.git
     ```
