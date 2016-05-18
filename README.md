@@ -5,20 +5,24 @@ web移动开发页面自适应解决方案，采用rem来统一页面视觉表�
 组件可以通过jc工具进行安装，或者通过bower安装
 
 安装组件到项目 （jc）
+
 	jc
+	
 	```shell
 	jc i suitui
 	```
 
     
 安装组件到项目 （bower）
+
     bower
+
     ```shell
     bower install git@git.ucweb.local:redfe/suitui.git
     ```
 
 **使用**
-```
+```html
     <script type="text/javascript" src='../../bower_components/suitui/src/suitui.js?__inline'></script>
     <script type="text/javascript">
     	window.JC.UI.init({
