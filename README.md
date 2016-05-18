@@ -6,7 +6,6 @@ web移动开发页面自适应解决方案，采用rem来统一页面视觉表�
 
 安装组件到项目 （jc）
 
-	jc
 
 ```shell
 jc i suitui
@@ -15,7 +14,6 @@ jc i suitui
     
 安装组件到项目 （bower）
 
-    bower
 
 ```shell
 bower install git@git.ucweb.local:redfe/suitui.git
