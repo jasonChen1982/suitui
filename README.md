@@ -16,7 +16,7 @@ jc i suitui
 
 
 ```shell
-bower install git@git.ucweb.local:redfe/suitui.git
+bower install git@git.ucweb.local:redfe/suitui.git#~0.1.1
 ```
 
 **使用**
