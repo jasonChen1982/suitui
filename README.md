@@ -2,13 +2,13 @@
 web移动开发页面自适应解决方案，采用rem来统一页面视觉表现。suitui提供了页面自适应能力，并解决了各个浏览器在实现rem上的差异和问题。
 
 ### 使用简介 ###
-组件可以通过jc工具进行安装，或者通过bower安装
+组件可以通过[ojo](https://github.com/jasonChen1982/ojo)工具进行安装，或者通过bower安装
 
-安装组件到项目 （jc）
+安装组件到项目 （[ojo](https://github.com/jasonChen1982/ojo)）
 
 
 ```shell
-jc i suitui
+ojo i suitui
 ```
 
     
