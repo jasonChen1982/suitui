@@ -21,6 +21,9 @@ bower install git@git.ucweb.local:redfe/suitui.git#~0.1.1
 
 **使用**
 ```html
+    <head>
+    <!-- 屏蔽我厂的个性化功能 -->
+    <meta name="wap-font-scale" content="no">
     <script type="text/javascript" src='../../bower_components/suitui/src/suitui.js?__inline'></script>
     <script type="text/javascript">
     	window.JC.UI.init({
@@ -29,4 +32,5 @@ bower install git@git.ucweb.local:redfe/suitui.git#~0.1.1
 	        'rem': 100 // rem到px的兑换比例，为了方便可以设为100、1000、10000...(不要设为10) default 100
     	});
     </script>
+    </head>
 ```
