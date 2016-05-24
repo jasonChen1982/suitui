@@ -6,8 +6,10 @@
         root: document.getElementsByTagName('html')[0],
         meta: document.createElement('meta'),
         hadPut: false,
+        ucHole: 1,
         rem: 100,
-        isIOS: window.navigator.appVersion.match(/iphone/gi) !== null
+        isIOS: window.navigator.appVersion.match(/iphone/gi) !== null,
+        isUC: window.navigator.userAgent.match(/UC/)
     };
 
     UI.init = function(opts){
@@ -32,13 +34,28 @@
         window.addEventListener('resize', function() {
             This.suit();
         }, false);
+        document.addEventListener("DOMContentLoaded", function() {
+            This.isUC&&This._fillHole();
+        });
         setTimeout(function() {
             This.suit();
         }, 100);
     };
+    UI._fillHole = function(){
+        var dom = document.createElement('div'),
+            sPX = 100,
+            tPX = 100;
+        dom.style.fontSize = sPX+"px";
+        document.body.appendChild(dom);
+        tPX = window.getComputedStyle(dom, null).fontSize||tPX;
+
+        this.ucHole = sPX/tPX;
+
+        This.suit();
+    };
     UI.suit = function(){
         var nowSize = this.VOH==='width'? window.innerWidth||document.documentElement.offsetWidth : window.innerHeight||document.documentElement.offsetWidth;
-        this.curPPR = this.rem * nowSize / this.DsgSize;
+        this.curPPR = this.ucHole * this.rem * nowSize / this.DsgSize;
         this.root.style.fontSize = this.curPPR + 'px';
     };
     UI.RTP = function(rem){
