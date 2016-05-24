@@ -16,7 +16,7 @@ ojo i suitui --save
 
 
 ```shell
-bower install git@git.ucweb.local:redfe/suitui.git#~0.1.1
+bower install git@git.ucweb.local:redfe/suitui.git#~0.1.2
 ```
 
 **使用**
