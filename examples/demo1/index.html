@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+<title>JC_demo</title>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<script type="text/javascript">
 (function() {
     'use strict';
     var UI = {
@@ -70,3 +81,47 @@
     window.JC = window.JC || {};
     window.JC.UI = UI;
 })();
+window.JC.UI.init();
+</script>
+</head>
+<body>
+<div id="page-preview" data-target="aaa" class="page_style cmp-preview hidden" style="display: block;">
+	<div class="preview_title previewT_en"></div>
+    <div class="photo_wrap">
+		<canvas id="photo_mirro" class="photo_mirro"></canvas>
+		<div class="mirro_face" id="touch_area">
+		</div>
+		<span class="ico_360"></span>
+		<span class="ico_uc"></span>
+    </div>
+	<p class="adjust_text">Try to adjust your photo in the frame You can upload it now or choose another one</p>
+
+	<div class="btn_wrap btn_en">
+		<div class="up_file" id="up_file"><span class="file_b"></span></div>
+		<div class="choose_other"><span class="choose_b"></span></div>
+		<form method="post" enctype="multipart/form-data" class="form">
+		    <input type="file" class="choose_other" style="opacity:0;" id="upfile" accept="image/*">
+		</form>
+    </div>
+	<div class="bottom_logo2"></div>
+	<div class="friend_ship">Use UC Browser &amp; Camera360 to share beautiful photo fast</div>
+</div>
+<div class="output_window" id="output_window" style="display: none;">
+    <span class="close" id="close"></span>
+    <img src="" id="target_img">
+</div>
+<script type="text/javascript" src="./js/JcPrune.min.js"></script>
+<script type="text/javascript">
+window.onerror = function(msg,url,line){
+	alert(msg+'\n'+line);
+};
+function $(id){
+	return document.getElementById(id);
+}
+$('close').addEventListener('click',function(){
+    $('output_window').style.display = 'none';
+},false);
+</script>
+<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
