@@ -31,9 +31,12 @@
         }
     };
     UI._ears = function(){
-        var This = this;
+        var This = this,timer = null;
         window.addEventListener('resize', function() {
-            This.suit();
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+                This.suit();
+            },500);
         }, false);
         document.addEventListener("DOMContentLoaded", function() {
             This.isUC&&This._fillHole();
