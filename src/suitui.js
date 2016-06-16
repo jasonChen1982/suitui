@@ -8,8 +8,7 @@
         hadPut: false,
         ucHole: 1,
         rem: 100,
-        isIOS: window.navigator.appVersion.match(/iphone/gi) !== null,
-        isUC: window.navigator.userAgent.match(/UC/)
+        isUC: /uc/i.test(window.navigator.userAgent)
     };
 
     UI.init = function(opts){
@@ -20,9 +19,8 @@
         this._putMeta();
     };
     UI._putMeta = function(){
-        var rato = this.isIOS ? 0.5 : 1.0;
         this.meta.setAttribute('name', 'viewport');
-        this.meta.setAttribute('content', 'initial-scale=' + rato + ', maximum-scale=' + rato + ', minimum-scale=' + rato + ', user-scalable=no');
+        this.meta.setAttribute('content', 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no');
         if (!this.hadPut) {
             this.root.firstElementChild.appendChild(this.meta);
             this.hadPut = true;
@@ -31,12 +29,9 @@
         }
     };
     UI._ears = function(){
-        var This = this,timer = null;
+        var This = this;
         window.addEventListener('resize', function() {
-            clearTimeout(timer);
-            timer = setTimeout(function(){
-                This.suit();
-            },500);
+            This.suit();
         }, false);
         document.addEventListener("DOMContentLoaded", function() {
             This.isUC&&This._fillHole();
@@ -58,7 +53,7 @@
         this.suit();
     };
     UI.suit = function(){
-        var nowSize = this.VOH==='width'? window.innerWidth||document.documentElement.offsetWidth : window.innerHeight||document.documentElement.offsetWidth;
+        var nowSize = this.VOH==='width'? document.documentElement.offsetWidth : document.documentElement.offsetWidth;
         this.sPPR = this.rem * nowSize / this.DsgSize;
         this.curPPR = this.ucHole * this.sPPR;
         this.root.style.fontSize = this.curPPR + 'px';
