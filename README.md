@@ -10,7 +10,7 @@ web移动开发页面自适应解决方案，采用rem来统一页面视觉表�
 
 
 ```shell
-bower install git@git.ucweb.local:redfe/suitui.git#~0.1.5
+bower install --save git@git.ucweb.local:redfe/suitui.git#~0.1.5
 ```
 
 **使用**
@@ -38,7 +38,7 @@ bower install git@git.ucweb.local:redfe/suitui.git#~0.1.5
 
 
 ```shell
-bower install git@git.ucweb.local:redfe/suitui.git#~0.2.0
+bower install --save git@git.ucweb.local:redfe/suitui.git#~0.2.0
 ```
 
 **使用**
