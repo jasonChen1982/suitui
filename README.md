@@ -16,7 +16,7 @@ ojo i suitui --save
 
 
 ```shell
-bower install git@git.ucweb.local:redfe/suitui.git#~0.1.2
+bower install git@git.ucweb.local:redfe/suitui.git#^0.1.4
 ```
 
 **使用**
@@ -24,13 +24,15 @@ bower install git@git.ucweb.local:redfe/suitui.git#~0.1.2
     <head>
     <!-- 屏蔽我厂的个性化功能 -->
     <meta name="wap-font-scale" content="no">
+    <meta content="scale-font-size" content="no">
     <script type="text/javascript" src='../../bower_components/suitui/src/suitui.js?__inline'></script>
     <script type="text/javascript">
-    	window.JC.UI.init({
-	        'VOH': 'width', // 指明是以 width｜height 为基准，default 'width'
-	        'DsgSize': 640, // 传入设计稿的设计尺寸，传入值为VOH做指明属性的大小，default 640
-	        'rem': 100 // rem到px的兑换比例，为了方便可以设为100、1000、10000...(不要设为10) default 100
-    	});
+        // {
+        //     'VOH': 'width', // 指明是以 width｜height 为基准，default 'width'
+        //     'DsgSize': 640, // 传入设计稿的设计尺寸，传入值为VOH做指明属性的大小，default 640
+        //     'rem': 100 // rem到px的兑换比例，为了方便可以设为100、1000、10000...(不要设为10) default 100
+        // }
+    	window.JC.UI.init();
     </script>
     </head>
 ```
