@@ -15,8 +15,7 @@
         VOH: 'width',
         DsgSize: 640,
         root: document.getElementsByTagName('html')[0],
-        meta: document.createElement('meta'),
-        hadPut: false,
+        needPut: false,
         ucHole: 1,
         rem: 100,
         isUC: /uc/i.test(window.navigator.userAgent)
@@ -27,17 +26,22 @@
         this.VOH = opts.VOH || 'width';
         this.DsgSize = opts.DsgSize || 640;
         this.rem = opts.rem || 100;
+        this.meta = document.querySelector('meta[name="viewport"]')||false;
         this._putMeta();
     };
     UI._putMeta = function(){
-        this.meta.setAttribute('name', 'viewport');
-        this.meta.setAttribute('content', 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no');
-        if (!this.hadPut) {
-            this.root.firstElementChild.appendChild(this.meta);
-            this.hadPut = true;
-            this.suit();
-            this._ears();
+        if(!this.meta){
+            this.meta = document.createElement('meta');
+            this.meta.setAttribute('name', 'viewport');
+            this.needPut = true;
         }
+        this.meta.setAttribute('content', 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no');
+        if (this.needPut) {
+            this.root.firstElementChild.appendChild(this.meta);
+            this.needPut = false;
+        }
+        this.suit();
+        this._ears();
     };
     UI._ears = function(){
         var This = this;
@@ -62,6 +66,10 @@
         this.ucHole = sPX/tPX;
 
         this.suit();
+
+        setTimeout(function() {
+            document.body.removeChild(dom);
+        }, 100);
     };
     UI.suit = function(){
         var nowSize = this.VOH==='width'? document.documentElement.offsetWidth : document.documentElement.offsetWidth;
@@ -79,6 +87,7 @@
     window.JC = window.JC || {};
     window.JC.UI = UI;
 })();
+
 window.JC.UI.init();
 </script>
 </head>
