@@ -4,9 +4,7 @@
   "description": "rem 自适应",
   "main": "src/suitui.js",
   "scripts": {
-    "patch": "npm --no-git-tag-version version patch && git add -A && git commit -m 'patch new version' && bower version patch && git push --tags",
-    "minor": "npm --no-git-tag-version version minor && git add -A && git commit -m 'minor new version' && bower version minor && git push --tags",
-    "major": "npm --no-git-tag-version version major && git add -A && git commit -m 'major new version' && bower version major && git push --tags",
+    "postversion": "git push origin v$npm_package_version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
