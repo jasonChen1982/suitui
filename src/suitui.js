@@ -67,7 +67,7 @@
         }, 100);
     };
     UI.suit = function() {
-        var nowSize = this.VOH === 'width' ? document.documentElement.offsetWidth : document.documentElement.offsetWidth;
+        var nowSize = this.VOH === 'width' ? document.documentElement.offsetWidth : document.documentElement.offsetHeight;
         this.sPPR = this.rem * nowSize / this.DsgSize;
         this.curPPR = this.ucHole * this.sPPR;
         this.root.style.fontSize = this.curPPR + 'px';
