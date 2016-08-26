@@ -3,7 +3,7 @@
     var UI = {
         VOH: 'width',
         DsgSize: 640,
-        root: document.getElementsByTagName('html')[0],
+        root: document.documentElement,
         needPut: false,
         ucHole: 1,
         resolution: Math.min(2,window.devicePixelRatio),
@@ -30,7 +30,7 @@
         var ratio = 1/this.resolution;
         this.meta.setAttribute('content', 'width=device-width,initial-scale='+ratio+', maximum-scale='+ratio+', minimum-scale='+ratio+', user-scalable=no');
         if (this.needPut) {
-            this.root.firstElementChild.appendChild(this.meta);
+            document.head.appendChild(this.meta);
             this.needPut = false;
         }
         this.suit();
@@ -56,7 +56,7 @@
             tPX = 100;
         dom.style.fontSize = sPX + "px";
         document.body.appendChild(dom);
-        tPX = parseInt(window.getComputedStyle(dom, null).fontSize) || tPX;
+        tPX = parseInt(window.getComputedStyle(dom, null).fontSize, 10) || tPX;
 
         this.ucHole = sPX / tPX;
 
