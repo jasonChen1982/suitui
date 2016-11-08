@@ -6,11 +6,11 @@ web移动开发页面自适应解决方案，采用rem来统一页面视觉表�
 
 #### 普通版本
     
-安装组件到项目 （bower）
+安装组件到项目 （npm）
 
 
 ```shell
-bower install --save git@git.ucweb.local:redfe/suitui.git#~0.1.5
+npm install --save suitui@0.1.5
 ```
 
 **使用**
@@ -19,7 +19,7 @@ bower install --save git@git.ucweb.local:redfe/suitui.git#~0.1.5
     <!-- 屏蔽我厂的个性化功能 -->
     <meta name="wap-font-scale" content="no">
     <meta content="scale-font-size" content="no">
-    <script type="text/javascript" src='../../bower_components/suitui/src/suitui.js?__inline'></script>
+    <script type="text/javascript" src='../../node_modules/suitui/src/suitui.js?__inline'></script>
     <script type="text/javascript">
         // {
         //     'VOH': 'width', // 指明是以 width｜height 为基准，default 'width'
@@ -34,11 +34,11 @@ bower install --save git@git.ucweb.local:redfe/suitui.git#~0.1.5
 
 #### 高清版本 （解决困扰你的一像素问题）
 
-安装组件到项目 （bower）
+安装组件到项目 （npm）
 
 
 ```shell
-bower install --save git@git.ucweb.local:redfe/suitui.git#~0.2.0
+npm install --save suitui
 ```
 
 **使用**
@@ -47,7 +47,7 @@ bower install --save git@git.ucweb.local:redfe/suitui.git#~0.2.0
     <!-- 屏蔽我厂的个性化功能 -->
     <meta name="wap-font-scale" content="no">
     <meta content="scale-font-size" content="no">
-    <script type="text/javascript" src='../../bower_components/suitui/src/suitui.js?__inline'></script>
+    <script type="text/javascript" src='../../node_modules/suitui/src/suitui.js?__inline'></script>
     <script type="text/javascript">
         // 以下追加配置根据个人口味需要添加
         // window.JC.UI.init({
