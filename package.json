@@ -7,11 +7,21 @@
     "postversion": "git push origin v$npm_package_version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "rem",
+    "suitui",
+    "css rem",
+    "browser"
+  ],
   "repository": {
     "type": "git",
-    "url": "git@git.ucweb.local:components/suitui.git"
+    "url": "git@github.com:jasonChen1982/suitui.git"
   },
-  "author": "",
+  "author": {
+    "name": "jason Chen",
+    "email": "jasonchen1882@gmail.com",
+    "url": "http://jason82.com"
+  },
   "license": "ISC",
   "dependencies": {}
 }
