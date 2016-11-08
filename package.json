@@ -1,7 +1,7 @@
 {
   "name": "suitui",
   "version": "0.2.3",
-  "description": "rem 自适应",
+  "description": "rem 自适应，让你的页面能够完美适应移动端屏幕",
   "main": "src/suitui.js",
   "scripts": {
     "postversion": "git push origin v$npm_package_version",
